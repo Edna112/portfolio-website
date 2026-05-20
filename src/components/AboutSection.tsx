@@ -9,8 +9,8 @@ export function AboutSection() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 md:grid-cols-2 md:gap-16 md:px-6">
         <div className="relative flex items-center justify-center">
           <DecorRings className="-translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 scale-90 opacity-80 md:scale-100" />
-          <div className="relative z-10">
-            <PortraitImage size="md" />
+          <div className="relative z-10 w-full max-w-md overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-2 shadow-xl shadow-black/30 sm:max-w-lg">
+            <PortraitImage size="xl" shape="square" className="ring-offset-[#0a1228]" />
           </div>
         </div>
 

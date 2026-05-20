@@ -27,11 +27,21 @@ export function ProjectsSection() {
               key={p.id}
               className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0a1228] shadow-lg transition hover:-translate-y-1 hover:border-[#0084ff]/35 hover:shadow-xl hover:shadow-[#0084ff]/10"
             >
-              <div className="aspect-[4/3] overflow-hidden bg-white/5">
+              <div
+                className={`aspect-[4/3] overflow-hidden ${
+                  'imageFit' in p && p.imageFit === 'contain'
+                    ? 'bg-gradient-to-br from-[#0a1228] via-[#21409a]/25 to-[#050a18]'
+                    : 'bg-white/5'
+                }`}
+              >
                 <img
                   src={p.image}
-                  alt=""
-                  className="size-full object-cover transition duration-500 group-hover:scale-105"
+                  alt={p.title}
+                  className={`size-full transition duration-500 ${
+                    'imageFit' in p && p.imageFit === 'contain'
+                      ? 'object-contain p-10 group-hover:scale-105'
+                      : 'object-cover group-hover:scale-105'
+                  }`}
                   loading="lazy"
                 />
               </div>
