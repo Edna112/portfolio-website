@@ -1,4 +1,5 @@
 import { profile } from '../data/profile'
+import { images } from '../lib/images'
 import { DecorRings } from './DecorRings'
 import { FloatingOrbs } from './FloatingOrbs'
 import { PrimaryCta } from './PrimaryCta'
@@ -46,7 +47,7 @@ export function HeroSection() {
           <FloatingOrbs />
           <div className="relative z-10 w-[min(100%,320px)] md:w-[min(100%,380px)]">
             <img
-              src="/hero.png"
+              src={images.heroPortrait}
               alt={`${profile.fullName} — ${profile.title}`}
               className="relative z-10 mx-auto w-full max-w-sm rounded-2xl object-cover shadow-2xl shadow-black/40 ring-1 ring-white/10 md:max-w-none"
               width={380}

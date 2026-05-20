@@ -1,4 +1,5 @@
 import { profile } from '../data/profile'
+import { images } from '../lib/images'
 import { DecorRings } from './DecorRings'
 import { PrimaryCta } from './PrimaryCta'
 
@@ -10,7 +11,7 @@ export function AboutSection() {
           <DecorRings className="-translate-x-1/4 -translate-y-1/4 top-0 left-0 scale-90 opacity-80 md:scale-100" />
           <div className="relative z-10 w-full max-w-md overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-2 shadow-xl shadow-black/30">
             <img
-              src="/about-portrait.png"
+              src={images.aboutPortrait}
               alt={profile.fullName}
               className="aspect-[4/5] w-full rounded-xl object-cover"
               width={400}
