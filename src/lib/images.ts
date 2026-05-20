@@ -1,7 +1,5 @@
-import aboutPortrait from '../assets/about-portrait.jpg'
-import heroPortrait from '../assets/hero.png'
+import portrait from '../assets/about-portrait.jpg'
 
 export const images = {
-  aboutPortrait,
-  heroPortrait,
+  portrait,
 } as const

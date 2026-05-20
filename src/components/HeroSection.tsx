@@ -1,7 +1,7 @@
 import { profile } from '../data/profile'
-import { images } from '../lib/images'
 import { DecorRings } from './DecorRings'
 import { FloatingOrbs } from './FloatingOrbs'
+import { PortraitImage } from './PortraitImage'
 import { PrimaryCta } from './PrimaryCta'
 import { SocialRow } from './SocialRow'
 import { TypingLine } from './TypingLine'
@@ -42,17 +42,11 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="relative order-1 flex min-h-[280px] justify-center md:order-2 md:min-h-[420px]">
+        <div className="relative order-1 flex min-h-[280px] items-center justify-center md:order-2 md:min-h-[420px]">
           <DecorRings className="-translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 md:scale-110" />
           <FloatingOrbs />
-          <div className="relative z-10 w-[min(100%,320px)] md:w-[min(100%,380px)]">
-            <img
-              src={images.heroPortrait}
-              alt={`${profile.fullName} — ${profile.title}`}
-              className="relative z-10 mx-auto w-full max-w-sm rounded-2xl object-cover shadow-2xl shadow-black/40 ring-1 ring-white/10 md:max-w-none"
-              width={380}
-              height={480}
-            />
+          <div className="relative z-10 flex items-center justify-center">
+            <PortraitImage size="lg" />
           </div>
         </div>
       </div>

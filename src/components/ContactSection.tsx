@@ -1,5 +1,6 @@
 import { type FormEvent, useState } from 'react'
 import { profile } from '../data/profile'
+import { PortraitImage } from './PortraitImage'
 
 export function ContactSection() {
   const [sent, setSent] = useState(false)
@@ -26,6 +27,9 @@ export function ContactSection() {
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="grid gap-10 rounded-2xl border border-white/10 bg-[#0a1228] p-6 md:grid-cols-2 md:gap-12 md:p-10">
           <div>
+            <div className="mb-6 flex justify-center md:justify-start">
+              <PortraitImage size="sm" />
+            </div>
             <span className="mb-4 inline-block rounded bg-[#0084ff] px-3 py-1 text-[10px] font-bold tracking-widest text-white">
               CONTACT
             </span>

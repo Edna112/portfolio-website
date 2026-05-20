@@ -1,22 +1,16 @@
 import { profile } from '../data/profile'
-import { images } from '../lib/images'
 import { DecorRings } from './DecorRings'
+import { PortraitImage } from './PortraitImage'
 import { PrimaryCta } from './PrimaryCta'
 
 export function AboutSection() {
   return (
     <section id="about" className="scroll-mt-24 py-16 md:scroll-mt-28 md:py-24">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 md:grid-cols-2 md:gap-16 md:px-6">
-        <div className="relative flex justify-center">
-          <DecorRings className="-translate-x-1/4 -translate-y-1/4 top-0 left-0 scale-90 opacity-80 md:scale-100" />
-          <div className="relative z-10 w-full max-w-md overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-2 shadow-xl shadow-black/30">
-            <img
-              src={images.aboutPortrait}
-              alt={profile.fullName}
-              className="aspect-[4/5] w-full rounded-xl object-cover"
-              width={400}
-              height={500}
-            />
+        <div className="relative flex items-center justify-center">
+          <DecorRings className="-translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 scale-90 opacity-80 md:scale-100" />
+          <div className="relative z-10">
+            <PortraitImage size="md" />
           </div>
         </div>
 

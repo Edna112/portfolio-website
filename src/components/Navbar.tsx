@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { profile } from '../data/profile'
 import { scrollToSection } from '../lib/scroll'
+import { PortraitImage } from './PortraitImage'
 
 const links = [
   { id: 'home', label: 'HOME' },
@@ -27,10 +28,7 @@ export function Navbar() {
           className="flex shrink-0 items-center gap-2 text-left font-bold tracking-tight text-white transition hover:text-[#0084ff]"
           aria-label="Go to home"
         >
-          <span
-            className="inline-block size-8 rounded-lg bg-gradient-to-br from-[#0084ff] to-[#0056b3]"
-            aria-hidden
-          />
+          <PortraitImage size="xs" ring={false} className="shadow-md ring-1 ring-white/20" />
           <span className="text-lg">{profile.shortName}</span>
         </button>
 
