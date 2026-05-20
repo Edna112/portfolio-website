@@ -1,3 +1,6 @@
+import learnosoImage from '../assets/projects/learnoso.svg'
+import reeplsImage from '../assets/projects/reepls.png'
+
 /** Update `linkedinUrl` and `githubUrl` with your full profile links when ready. */
 export const profile = {
   fullName: 'Chenwi Edna Neh',
@@ -22,8 +25,8 @@ export const projects = [
     description:
       'Publishing platform for African creators—long-form writing and storytelling away from noisy social feeds. Backend APIs, authentication, and content delivery.',
     url: 'https://reepls.com/',
-    image:
-      'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80&auto=format&fit=crop',
+    image: reeplsImage,
+    imageFit: 'contain' as const,
   },
   {
     id: 'learnoso',
@@ -32,8 +35,8 @@ export const projects = [
     description:
       'Scalable LMS with video conferencing, live lectures, quizzes, multi-role dashboards (admin, tutors, students), academic tracking, and financial modules.',
     url: 'https://www.learnoso.com/',
-    image:
-      'https://images.unsplash.com/photo-1523240795612-9a054b05541c?w=800&q=80&auto=format&fit=crop',
+    image: learnosoImage,
+    imageFit: 'contain' as const,
   },
   {
     id: 'testlangues',
@@ -55,4 +58,4 @@ export const projects = [
     image:
       'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&q=80&auto=format&fit=crop',
   },
-] as const
+]
